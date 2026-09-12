@@ -70,3 +70,21 @@ class WifiScreen extends StatelessWidget {
   Widget build(BuildContext context) => const WifiNetworksScreen();
 }
 
+class SettingsScreen extends StatelessWidget {
+  const SettingsScreen({super.key});
+  @override
+  Widget build(BuildContext context) => const UserProfileEditScreen();
+}
+
+class SupportScreen extends StatelessWidget {
+  const SupportScreen({super.key});
+  @override
+  Widget build(BuildContext context) => const UserProfileEditScreen();
+}
+
+class NotificationsScreen extends StatelessWidget {
+  const NotificationsScreen({super.key});
+  @override
+  Widget build(BuildContext context) => const OperationsView();
+}
+

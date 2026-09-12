@@ -1294,7 +1294,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     decoration: BoxDecoration(
                       color: const Color(0xFFFEF3C7),
                       borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: const Color(0xFFF59E0B).withValues(alpha: 0.4)),
+                      border: Border.all(color: const Color(0xFFF59E0B).withOpacity(0.4)),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -2345,7 +2345,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
               color: op.headerColor,
               borderRadius: BorderRadius.circular(16),
               boxShadow: [
-                BoxShadow(color: op.headerColor.withValues(alpha: 0.25), blurRadius: 8, offset: const Offset(0, 3)),
+                BoxShadow(color: op.headerColor.withOpacity(0.25), blurRadius: 8, offset: const Offset(0, 3)),
               ],
             ),
             child: Row(
@@ -2409,7 +2409,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                               color: isSelected ? o.headerColor : Colors.white,
                               border: Border.all(color: o.headerColor, width: isSelected ? 2.5 : 1.5),
                               boxShadow: [
-                                if (isSelected) BoxShadow(color: o.headerColor.withValues(alpha: 0.35), blurRadius: 8, offset: const Offset(0, 2)),
+                                if (isSelected) BoxShadow(color: o.headerColor.withOpacity(0.35), blurRadius: 8, offset: const Offset(0, 2)),
                               ],
                             ),
                             alignment: Alignment.center,
@@ -2910,7 +2910,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
           borderRadius: BorderRadius.circular(16),
           border: Border.all(color: cardBorder),
           boxShadow: [
-            BoxShadow(color: Colors.black.withValues(alpha: 0.02), blurRadius: 4, offset: const Offset(0, 2)),
+            BoxShadow(color: Colors.black.withOpacity(0.02), blurRadius: 4, offset: const Offset(0, 2)),
           ],
         ),
         child: Column(

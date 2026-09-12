@@ -130,10 +130,10 @@ class _HeadsUpBannerWidgetState extends State<_HeadsUpBannerWidget> with SingleT
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(18),
-                  border: Border.all(color: _accentColor.withValues(alpha: 0.35), width: 1.5),
+                  border: Border.all(color: _accentColor.withOpacity(0.35), width: 1.5),
                   boxShadow: [
-                    BoxShadow(color: Colors.black.withValues(alpha: 0.12), blurRadius: 18, offset: const Offset(0, 6)),
-                    BoxShadow(color: _accentColor.withValues(alpha: 0.08), blurRadius: 10, offset: const Offset(0, 2)),
+                    BoxShadow(color: Colors.black.withOpacity(0.12), blurRadius: 18, offset: const Offset(0, 6)),
+                    BoxShadow(color: _accentColor.withOpacity(0.08), blurRadius: 10, offset: const Offset(0, 2)),
                   ],
                 ),
                 child: Row(
@@ -141,7 +141,7 @@ class _HeadsUpBannerWidgetState extends State<_HeadsUpBannerWidget> with SingleT
                     Container(
                       width: 40,
                       height: 40,
-                      decoration: BoxDecoration(color: _accentColor.withValues(alpha: 0.12), shape: BoxShape.circle),
+                      decoration: BoxDecoration(color: _accentColor.withOpacity(0.12), shape: BoxShape.circle),
                       child: Icon(_icon, color: _accentColor, size: 22),
                     ),
                     const SizedBox(width: 12),
@@ -156,7 +156,7 @@ class _HeadsUpBannerWidgetState extends State<_HeadsUpBannerWidget> with SingleT
                               const Spacer(),
                               Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                                decoration: BoxDecoration(color: slate.withValues(alpha: 0.08), borderRadius: BorderRadius.circular(6)),
+                                decoration: BoxDecoration(color: slate.withOpacity(0.08), borderRadius: BorderRadius.circular(6)),
                                 child: Text('الآن', style: TextStyle(fontSize: 9, color: slate)),
                               ),
                             ],

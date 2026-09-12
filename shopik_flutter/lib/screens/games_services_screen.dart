@@ -367,7 +367,7 @@ class _PlatformCard extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(
-                  color: AppColors.purple.withValues(alpha: 0.1),
+                  color: AppColors.purple.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: const Row(
@@ -513,7 +513,7 @@ class _RechargeSheetState extends State<_RechargeSheet> {
                     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                     decoration: BoxDecoration(
                       color: selectedPackage?.id == pkg.id
-                          ? AppColors.purple.withValues(alpha: 0.08)
+                          ? AppColors.purple.withOpacity(0.08)
                           : const Color(0xFFF8FAFC),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(

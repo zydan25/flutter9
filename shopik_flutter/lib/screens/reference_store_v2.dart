@@ -140,7 +140,7 @@ class _StoreViewState extends State<StoreView> {
                   border: const Border(top: BorderSide(color: Color(0xFFE2E8F0))),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.06),
+                      color: Colors.black.withOpacity(0.06),
                       blurRadius: 10,
                       offset: const Offset(0, -3),
                     ),
@@ -409,7 +409,7 @@ class _StoreViewState extends State<StoreView> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.22),
+                    color: Colors.white.withOpacity(0.22),
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: Text(
@@ -887,7 +887,7 @@ class _ProductCard extends StatelessWidget {
                         width: 30,
                         height: 30,
                         decoration: BoxDecoration(
-                          color: Colors.white.withValues(alpha: 0.85),
+                          color: Colors.white.withOpacity(0.85),
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Icon(

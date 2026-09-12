@@ -229,7 +229,7 @@ class _ProductDetailViewState extends State<ProductDetailView> {
             border: const Border(top: BorderSide(color: Color(0xFFE2E8F0))),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withValues(alpha: 0.08),
+                color: Colors.black.withOpacity(0.08),
                 blurRadius: 10,
                 offset: const Offset(0, -3),
               ),
@@ -1005,7 +1005,7 @@ class _StoreProfileViewState extends State<StoreProfileView> {
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
                                   decoration: BoxDecoration(
-                                    color: Colors.white.withValues(alpha: 0.2),
+                                    color: Colors.white.withOpacity(0.2),
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                   child: Row(
@@ -1408,7 +1408,7 @@ class _OrdersDetailViewState extends State<OrdersDetailView> {
                                 Container(
                                   padding: const EdgeInsets.all(8),
                                   decoration: BoxDecoration(
-                                    color: statusColor.withValues(alpha: 0.12),
+                                    color: statusColor.withOpacity(0.12),
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                   child: Icon(
@@ -1437,7 +1437,7 @@ class _OrdersDetailViewState extends State<OrdersDetailView> {
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                                   decoration: BoxDecoration(
-                                    color: statusColor.withValues(alpha: 0.12),
+                                    color: statusColor.withOpacity(0.12),
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                   child: Text(

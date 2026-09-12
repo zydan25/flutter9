@@ -25,7 +25,7 @@ class _ShopikAppState extends State<ShopikApp> {
   }
   @override Widget build(BuildContext context) => MaterialApp(
     debugShowCheckedModeBanner: false,
-    title: 'شبيك | SHOPIK',
+    title: 'شبيك باي | SHOPIK PAY',
     locale: const Locale('ar'),
     theme: ThemeData(
       useMaterial3: true,

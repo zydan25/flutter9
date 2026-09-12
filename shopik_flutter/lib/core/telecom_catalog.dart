@@ -44,7 +44,7 @@ class TelecomPackageInfo {
     final parsed = parseTelecomDetails('$name $desc');
 
     return TelecomPackageInfo(
-      id: '${map['id'] ?? code.isNotEmpty ? code : name}',
+      id: '${map['id'] ?? (code.isNotEmpty ? code : name)}',
       name: name.isNotEmpty ? name : 'باقة اتصالات معتمدة',
       operatorId: operatorId,
       category: parsed['category'] ?? 'باقات متنوعة',

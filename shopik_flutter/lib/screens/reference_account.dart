@@ -102,7 +102,7 @@ class _AddressesScreenState extends State<AddressesScreen> {
             color: Colors.white,
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withValues(alpha: 0.06),
+                color: Colors.black.withOpacity(0.06),
                 blurRadius: 10,
                 offset: const Offset(0, -3),
               ),
@@ -167,7 +167,7 @@ class _AddressesScreenState extends State<AddressesScreen> {
                 width: 34,
                 height: 34,
                 decoration: BoxDecoration(
-                  color: isDefault ? AppColors.blue.withValues(alpha: 0.12) : const Color(0xFFF1F5F9),
+                  color: isDefault ? AppColors.blue.withOpacity(0.12) : const Color(0xFFF1F5F9),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Icon(

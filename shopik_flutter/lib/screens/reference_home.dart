@@ -36,10 +36,10 @@ class _HomeShellState extends State<HomeShell> {
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
           color: Colors.white,
-          border: Border(top: BorderSide(color: Colors.black.withValues(alpha: 0.08), width: 1)),
+          border: Border(top: BorderSide(color: Colors.black.withOpacity(0.08), width: 1)),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withValues(alpha: 0.05),
+              color: Colors.black.withOpacity(0.05),
               blurRadius: 10,
               offset: const Offset(0, -2),
             ),
@@ -72,7 +72,7 @@ class _HomeShellState extends State<HomeShell> {
         duration: const Duration(milliseconds: 180),
         padding: EdgeInsets.symmetric(horizontal: isSelected ? 12 : 8, vertical: 4),
         decoration: BoxDecoration(
-          color: isSelected ? activeColor.withValues(alpha: 0.12) : Colors.transparent,
+          color: isSelected ? activeColor.withOpacity(0.12) : Colors.transparent,
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
@@ -327,7 +327,7 @@ class DynamicServiceCard extends StatelessWidget {
                 InkWell(
                   onTap: () => _open(context, item),
                   borderRadius: BorderRadius.circular(12),
-                  child: Container(width: 112, padding: const EdgeInsets.all(8), decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12), border: Border.all(color: color.withValues(alpha: .22))), child: Column(children: [Text('${item['name'] ?? 'عنصر'}', maxLines: 2, overflow: TextOverflow.ellipsis, textAlign: TextAlign.center, style: const TextStyle(fontSize: 8.5, fontWeight: FontWeight.w900)), const SizedBox(height: 4), Text(money(item['price']), style: TextStyle(fontSize: 11, color: color, fontWeight: FontWeight.w900))])),
+                  child: Container(width: 112, padding: const EdgeInsets.all(8), decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12), border: Border.all(color: color.withOpacity(.22))), child: Column(children: [Text('${item['name'] ?? 'عنصر'}', maxLines: 2, overflow: TextOverflow.ellipsis, textAlign: TextAlign.center, style: const TextStyle(fontSize: 8.5, fontWeight: FontWeight.w900)), const SizedBox(height: 4), Text(money(item['price']), style: TextStyle(fontSize: 11, color: color, fontWeight: FontWeight.w900))])),
                 ),
             ],
           )
@@ -380,7 +380,7 @@ class _DynamicServiceDialogState extends State<DynamicServiceDialog> {
         width: 430,
         child: SingleChildScrollView(
           child: Column(mainAxisSize: MainAxisSize.min, children: [
-            if (widget.item != null) Container(width: double.infinity, padding: const EdgeInsets.all(9), decoration: BoxDecoration(color: widget.color.withValues(alpha: .08), borderRadius: BorderRadius.circular(12)), child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('${widget.item!['name'] ?? 'العنصر'}', style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w900)), Text(money(widget.item!['price']), style: TextStyle(color: widget.color, fontWeight: FontWeight.w900))])),
+            if (widget.item != null) Container(width: double.infinity, padding: const EdgeInsets.all(9), decoration: BoxDecoration(color: widget.color.withOpacity(.08), borderRadius: BorderRadius.circular(12)), child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('${widget.item!['name'] ?? 'العنصر'}', style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w900)), Text(money(widget.item!['price']), style: TextStyle(color: widget.color, fontWeight: FontWeight.w900))])),
             for (final field in list) Padding(padding: const EdgeInsets.only(top: 8), child: TextField(controller: fields['${field['key'] ?? ''}'], obscureText: field['secret'] == true, decoration: InputDecoration(labelText: '${field['label'] ?? field['key']}', isDense: true))),
           ]),
         ),
@@ -419,7 +419,7 @@ class _WalletMini extends StatelessWidget {
   const _WalletMini({required this.title, required this.value, required this.icon});
   final String title, value;
   final IconData icon;
-  @override Widget build(BuildContext context) => Container(padding: const EdgeInsets.all(8), decoration: BoxDecoration(color: Colors.white.withValues(alpha: .10), borderRadius: BorderRadius.circular(11)), child: Row(children: [Icon(icon, color: const Color(0xFFFDE68A), size: 16), const SizedBox(width: 6), Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Text(title, style: const TextStyle(color: Colors.white70, fontSize: 7.5)), Text(value, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(color: Colors.white, fontSize: 9.5, fontWeight: FontWeight.w900))]))]));
+  @override Widget build(BuildContext context) => Container(padding: const EdgeInsets.all(8), decoration: BoxDecoration(color: Colors.white.withOpacity(.10), borderRadius: BorderRadius.circular(11)), child: Row(children: [Icon(icon, color: const Color(0xFFFDE68A), size: 16), const SizedBox(width: 6), Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Text(title, style: const TextStyle(color: Colors.white70, fontSize: 7.5)), Text(value, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(color: Colors.white, fontSize: 9.5, fontWeight: FontWeight.w900))]))]));
 }
 
 class _QuickAction extends StatelessWidget {
